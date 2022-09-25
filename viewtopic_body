@@ -1,4 +1,5 @@
-<br />
+<link rel="stylesheet" href="https://sd-2.archive-host.com/membres/up/56188524930079406/fiches.css" type="text/css">
+  <br />
 
  
 
@@ -114,7 +115,7 @@
                <div class="encaprofil">
               <div class="systab">
  <div class="selected"> 
-   <span>Onglet 1</span>
+   <span>TURN ON</span>
         <div id="barre"><span class="profil"> <!-- BEGIN profile_field --><div class="infos-posteur">
           <span class="profil_label"> <!-- Champs du profil  --> {postrow.displayed.profile_field.LABEL}</span>
               <!-- Contenu/réponses aux champs --> {postrow.displayed.profile_field.CONTENT}
@@ -122,8 +123,8 @@
           </div> <!-- END profile_field --> </span></div>
  </div>
  <div> 
-   <span>Onglet 3</span>
-   <div class="other"><!-- Les champs du profil seront déplacés ici --></div>
+   <span>TURN OFF</span>
+   <div id="barre"> <div class="other"><!-- Les champs du profil seront déplacés ici --></div></div>
  </div>
                  </div></div>
 </span><br />
@@ -155,11 +156,15 @@
         <div class="post_message postbody content">
             <div>{postrow.displayed.MESSAGE}</div>
 
-          <!-- Conteneur du bouton like -->
-             <!-- BEGIN switch_likes_active --> <div class="fa_like_div"> <div class="rep-button {postrow.displayed.switch_likes_active.C_VOTE_LIKE}"  data-href="{postrow.displayed.switch_likes_active.U_VOTE_LIKE}" data-href-rm="{postrow.displayed.switch_likes_active.U_VOTE_RM_LIKE}"> <span>{postrow.displayed.switch_likes_active.L_LIKE}</span>{postrow.displayed.switch_likes_active.COUNT_VOTE_LIKE} </div></div> <!-- END switch_likes_active --><!-- BEGIN switch_likes_active --> <div class="fa_like_div"> <!-- BEGIN switch_like_list --> {postrow.displayed.switch_likes_active.switch_like_list.D_LIKE_LIST} <!-- END switch_like_list --> </div> <!-- END switch_likes_active -->
+                <!-- Conteneur du bouton like -->
+             <!-- BEGIN switch_likes_active --> <div class="fa_like_div"> <div class="rep-button {postrow.displayed.switch_likes_active.C_VOTE_LIKE}"  data-href="{postrow.displayed.switch_likes_active.U_VOTE_LIKE}" data-href-rm="{postrow.displayed.switch_likes_active.U_VOTE_RM_LIKE}"> <span>{postrow.displayed.switch_likes_active.L_LIKE}</span>{postrow.displayed.switch_likes_active.COUNT_VOTE_LIKE} </div></div> 
+          <!-- END switch_likes_active -->
+          <!-- BEGIN switch_likes_active --> <div class="fa_like_div"> 
+          <!-- BEGIN switch_like_list --> {postrow.displayed.switch_likes_active.switch_like_list.D_LIKE_LIST} 
+          <!-- END switch_like_list --> </div> <!-- END switch_likes_active -->
                     
                 <!-- Fin du bouton like -->
-          
+          <br><br>
             <!-- Signature -->
             <!-- BEGIN switch_signature -->
             <div class="signature_div" id="sig{postrow.displayed.U_POST_ID}">{postrow.displayed.SIGNATURE_NEW}</div>
@@ -353,5 +358,9 @@
     //]]>
 
 </script>
+  
+  
+
+ 
 
             
