@@ -1,17 +1,52 @@
 jQuery(function () {
 
+    // on indique la version du forum
+    // attention de bien respecter les écritures ci-dessous
+    // invision, phpbb2, phpbb3, punbb, Invision, ModernBB, AwesomeBB
     var versionForum = 'ModernBB',
         $chemin,
-        $eltParent = '.postdetails poster-profile';
+        $eltParent = '.postdetails';
 
-    $chemin = ".post .post_details .post_profile .encava .infos-posteur";
+    // On indique le chemin vers la balise qui contient les champs du profil
+    switch(versionForum){
+        // Si on est sur invision
+        case 'invision':
+            $chemin = ".post .postbody .user-info .infos-posteur";
+            break;
 
-      
+        // Si on est sur phpbb2
+        case 'phpbb2':
+            $chemin = ".post .postdetails.poster-profile .infos-posteur";
+            break;
+
+        // Si on est sur punbb
+        case 'punbb':
+            $chemin = ".post .postbody .user-info .infos-posteur";
+            break;
+
+        // Si on est sur AwesomeBB
+        case 'AwesomeBB':
+            $chemin = ".post-wrap .post-body .post-aside .infos-posteur";
+            $eltParent = ".post-aside";
+            break;
+
+        // Si on est sur phpbb3, ModernBB, Invision
+        default:
+            $chemin = ".post_profile .postdetails .infos-posteur";
+            break;
+    };
+
+    // Si la structure est différente de celle de base
+    // indiquer le bon chemin et
+    // décommenter (en supprimer // ) la ligne ci-dessous
+    // chemin = "ton chemin";
+
+    // On parcourt chaque champs des profils
     $( $chemin ).each(function( index ) {
-
+        // On récupére le contenu html de ces champs
         var champs = $(this).find('.label').html() ;
  
-        if( champs == "PSEUDO :" || champs == "PSEUDO" || champs == "PSEUDO : " || champs == "Crédits : " || champs == "Faceclaim : " || champs == "Multicomptes : "){
+      if( champs == "MULTICOMPTES : " || champs == "PSEUDO" || champs == "PSEUDO : " || champs == "Crédits : " || champs == "Faceclaim : " || champs == "Multicomptes : "){
             $(this).parents($eltParent).find('.other').append(this);
  
         }
