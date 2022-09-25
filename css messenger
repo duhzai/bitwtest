@@ -936,6 +936,7 @@ color: var(--txt2)!important;
 text-transform: lowercase;
 font-style: italic;
 margin-right: 5px;
+margin-left: 5px;
 }
 
 .FAM-chat-date > strong {
