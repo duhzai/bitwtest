@@ -1,0 +1,20 @@
+jQuery(function () {
+
+    var versionForum = 'ModernBB',
+        $chemin,
+        $eltParent = '.postdetails poster-profile';
+
+    $chemin = ".post .post_details .post_profile .encava .infos-posteur";
+
+      
+    $( $chemin ).each(function( index ) {
+
+        var champs = $(this).find('.label').html() ;
+ 
+        if( champs == "PSEUDO :" || champs == "PSEUDO" || champs == "PSEUDO : " || champs == "Crédits : " || champs == "Faceclaim : " || champs == "Multicomptes : "){
+            $(this).parents($eltParent).find('.other').append(this);
+ 
+        }
+ 
+    });
+});
