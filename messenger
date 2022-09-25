@@ -6,7 +6,7 @@
       // Configuration de Forumactif Messenger
       // Documentation des paramÃ¨tres : https://github.com/SethClydesdale/forumactif-messenger/wiki/Config
       config : {
-        chat_page : 'https://outoftouch.forumactif.com/f5-mobile-phone',
+        chat_page : '/f5-mobile-phone',
         chat_permission : 'all',  //  peut Ãªtre [all] ou [member] ou [staff]
         main_title : 'messenger',
         
