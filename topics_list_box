@@ -72,7 +72,7 @@
 <!-- Avatar du dernier posteur-->
     <div class="topicslist-avatar-lastpost lastpostavatar">
         <!-- BEGIN avatar -->
-      {topics_list_box.row.topic.avatar.LAST_POST_AVATAR}
+      <div style="display:none;">{topics_list_box.row.topic.avatar.LAST_POST_AVATAR}</div>
         <!-- END avatar -->
     </div>
 
